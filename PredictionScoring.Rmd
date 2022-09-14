@@ -27,6 +27,8 @@ library(gridExtra)
 library(grid)
 library(PRROC)
 library(rlang)
+
+myseed <- 3421237
 ```
 
 ```{r,class.source = 'fold-show'}
@@ -199,7 +201,7 @@ grid.arrange(g.pre.model,g.cyc1.model,ncol=2)
 Each of the following versions of our prediction scoring method takes ~ 10 minutes to run.
 ### Unweighted version
 ```{r,class.source = 'fold-show',message=FALSE,results='hide',warning=FALSE}
-# set.seed()
+set.seed(myseed)
 val_1.4 <- predscore( model1.4, newdata=gallup2, Ksize=50 )
 ```
 
@@ -254,7 +256,7 @@ ks.test( val_1.4$cv$results$q, val_1.4$val$results$q )
 ### Weighted version
 Observations are resampled to match the marginal distributions.
 ```{r, class.source = 'fold-show',message=FALSE,results='hide',warning=FALSE}
-#set.seed()
+set.seed(myseed)
 val_wtd_1.4 <- predscore( model1.4, newdata=gallup2, Ksize=50,
                       wtd=TRUE )
 ```
