@@ -9,7 +9,9 @@ the following paper:
     research.” *Statistics and Computing.* doi: 10.7916/D82F95D0.
 
 All code to reproduce the real data example is available in the
-PredictionScoring.Rmd document (previews available below), and
+PredictionScoring.Rmd document (some previews are available below) which can 
+be downloaded from this repository or viewed online via GitHub pages 
+<https://annalantzsmith.github.io/PredictionScoring/>, and
 accompanying helper .R files. The simulation study also uses the code in
 the “predScore4_alter_102919.R” file, and additional code is available
 on request.
